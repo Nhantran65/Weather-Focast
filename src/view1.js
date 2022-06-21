@@ -37,4 +37,4 @@ function list_all_50(ADDRESS){
     xhr.send();
 }
 
-list_all_50('http://webapi19sa-1.course.tamk.cloud/v1/weather')
+list_all_50('https://webapi19sa-1.course.tamk.cloud/v1/weather')

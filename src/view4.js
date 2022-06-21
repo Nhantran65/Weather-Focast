@@ -6,7 +6,7 @@ function new_type_button(method,time){
     txt += "</button>"
     txt += "<div class=\"dropdown-content\">"
     for (x in method_array){
-        txt += "<a href=\"#\" onclick = \"list_4('http://webapi19sa-1.course.tamk.cloud/v1/weather',\'" + method_array[x].toString() + "\','" + time.toString() + "')\">" + method_array[x].toString() + "</a>"
+        txt += "<a href=\"#\" onclick = \"list_4('https://webapi19sa-1.course.tamk.cloud/v1/weather',\'" + method_array[x].toString() + "\','" + time.toString() + "')\">" + method_array[x].toString() + "</a>"
     }
     txt += "</div>"
     document.getElementById("type").innerHTML = txt;
