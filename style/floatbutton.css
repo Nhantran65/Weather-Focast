@@ -21,7 +21,7 @@
 	height:80px;
     bottom:49%;
     transition: linear 0.2s;
-	border: 4px solid #3E64FF;
+	border: 4px solid #333;
 }
 *{padding:0;margin:0;}
 .reset{

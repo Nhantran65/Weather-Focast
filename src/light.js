@@ -45,7 +45,7 @@ function list_4(ADDRESS,method,time){
             }
 
             //for checking only
-            //document.getElementById("checking").innerHTML = myObj;
+          
             
             new_type_button(method,time)
             

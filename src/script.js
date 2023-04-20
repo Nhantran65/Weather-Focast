@@ -8,10 +8,10 @@ function min_max_bar(min,max,value){
     txt += "<div class=\"minmaxbar\">";   
     txt += "<h3 id=\"title_bar\">Data Ruler</h3>"; 
     txt +="<div class=\"valuetext\">"+"Min: "+parseFloat(min).toFixed(2)+"</div>"
-    //document.getElementById("checking").innerHTML = (((parseFloat(value,10)-parseFloat(min,10))/(parseFloat(max,10)-parseFloat(min,10)))*100).toString().slice(0,2);
+    
     txt +="<div class=\"seekbar\" data-seekbar-value=\""+(((parseFloat(value,10)-parseFloat(min,10))/(parseFloat(max,10)-parseFloat(min,10)))*100).toString()+"\"></div>";
     txt +="<div class=\"valuetext\">"+"Max: "+parseFloat(max).toFixed(2)+"</div>"    
-    //txt +="<div class=\"nowtest\">"+"Now: "+parseFloat(value).toFixed(2)+"</div>"
+ 
     txt += "</div>";
     
     document.getElementById("minmaxbar").innerHTML = txt;

@@ -13,7 +13,7 @@ function seekbar () {
 
         if (seekbar[i].hasAttribute('data-seekbar-value')) {
             var posi = seekbar[i].getAttribute('data-seekbar-value');
-            seekbar_setposi(seekbar_btn, seekbar_bg, posi);
+            seekbarSetPo(seekbar_btn, seekbar_bg, posi);
         } else {
             seekbar[i].setAttribute('data-seekbar-value', '0');
         }
@@ -45,7 +45,7 @@ function seekbar_getposi(elem, e) {
 /*
  * Set Position 
  */
-function seekbar_setposi(btn, bg, posi) {
+function seekbarSetPo(btn, bg, posi) {
     if (btn !== undefined) {
         btn.style.left = posi + "%";
         bg.style.width = posi + "%";
@@ -60,6 +60,6 @@ function seekbar_setposi(btn, bg, posi) {
 function remv_evt() {
     window.removeEventListener('mousedown', seekbar_getposi, true);
     window.removeEventListener('mousemove', seekbar_getposi, true);
-    window.removeEventListener('mousedown', seekbar_setposi, true);
-    window.removeEventListener('mousemove', seekbar_setposi, true);
+    window.removeEventListener('mousedown', seekbarSetPo, true);
+    window.removeEventListener('mousemove', seekbarSetPo, true);
 }

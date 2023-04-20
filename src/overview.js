@@ -1,40 +1,40 @@
 function list_all_50(ADDRESS){
     document.getElementById("type").innerHTML = ""
-    //alert("clicked");
-    var txt = "";
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", ADDRESS);
+
+    var cpn = "";
+    const igr = new XMLHttpRequest();
+    igr.open("GET", ADDRESS);
     const DONE = 4;
-    const SUCCESS = 200;
-    xhr.onreadystatechange = function() {
+    const suc = 200;
+    igr.onreadystatechange = function() {
         if (this.readyState == DONE &&
-            this.status == SUCCESS) {
+            this.status == suc) {
             var myObj = JSON.parse(this.responseText);
             var x = 0;
-            txt += "<table id=\'memberTable\'>"
-            txt += "<tr class = \"row\">";
+            cpn += "<table id=\'memberTable\'>"
+            cpn += "<tr class = \"row\">";
             for (x = 0; x < 5; x++){
-                txt += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
-                txt += header[x];
-                txt += "</td>"
+                cpn += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
+                cpn += header[x];
+                cpn += "</td>"
             }
-            txt += "</tr>";
+            cpn += "</tr>";
 
             for (x in myObj) {
                 order = parseInt(x,10) + 1;
                 
-                txt += "<tr class = \"row\" id=\"row"+x+"\""+ " style=\"background-color: "+color+"\""+"><td>" + order +"</td>";
-                txt += "<td>" + myObj[x].date_time.toString().slice(0,10) + "</td>" + "<td>" + myObj[x].date_time.toString().slice(11,23) + "</td>";
-                txt += "<td>"+Object.keys(myObj[x].data)+"</td>"+"<td>"+Object.values(myObj[x].data)+"</td>";
-                txt +="</td><tr>";
+                cpn += "<tr class = \"row\" id=\"row"+x+"\""+ " style=\"background-color: "+color+"\""+"><td>" + order +"</td>";
+                cpn += "<td>" + myObj[x].date_time.toString().slice(0,10) + "</td>" + "<td>" + myObj[x].date_time.toString().slice(11,23) + "</td>";
+                cpn += "<td>"+Object.keys(myObj[x].data)+"</td>"+"<td>"+Object.values(myObj[x].data)+"</td>";
+                cpn +="</td><tr>";
 
                 if (order===50) break;
             }
-            txt += "</table>" 
-            document.getElementById("table").innerHTML = txt;
+            cpn += "</table>" 
+            document.getElementById("table").innerHTML = cpn;
         }
     };
-    xhr.send();
+    igr.send();
 }
 
 list_all_50('https://webapi19sa-1.course.tamk.cloud/v1/weather')

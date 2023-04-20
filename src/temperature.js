@@ -1,53 +1,53 @@
 function list_temp(ADDRESS){
     document.getElementById("type").innerHTML = ""
-    //alert("clicked");
-    var txt = "";
-    const xhr = new XMLHttpRequest();
-    xhr.open("GET", ADDRESS);
+
+    var cpn = "";
+    const ing = new XMLHttpRequest();
+    ing.open("GET", ADDRESS);
     const DONE = 4;
     const SUCCESS = 200;
-    xhr.onreadystatechange = function() {
+    ing.onreadystatechange = function() {
         if (this.readyState == DONE &&
             this.status == SUCCESS) {
             var myObj = JSON.parse(this.responseText);
             var x = 0;
             
             //float button
-            txt += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
+            cpn += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
 
             //bar graph
-            txt += "<div class=\"card\" style=\"background-color: #1E2745;\">";   
-            txt += "<canvas id=\"temp_chart\"></canvas>";
-            txt += "</div>";
+            cpn += "<div class=\"card\" style=\"background-color: #1E2745;\">";   
+            cpn += "<canvas id=\"temp_chart\"></canvas>";
+            cpn += "</div>";
 
             //slice
-            txt += "<div class = \"bar_container\" id = \"minmaxbar\"></div>"
+            cpn += "<div class = \"bar_container\" id = \"minmaxbar\"></div>"
             
             //Table
-            txt += "<table id=\'memberTable\'>"
+            cpn += "<table id=\'memberTable\'>"
             
-            txt += "<tr class = \"row\">";
+            cpn += "<tr class = \"row\">";
             for (x = 0; x < 5; x++){
-                txt += "<td  style=\"background-color: #3E64FF;color: #fff;text-align: center;\">" ;
-                txt += header[x];
-                txt += "</td>"
+                cpn += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
+                cpn += header[x];
+                cpn += "</td>"
             }
-            txt += "</tr>";
+            cpn += "</tr>";
             
             for (x in myObj) {
-                txt += "<tr class=\"row\" id=\"row"+x+"\""+ "onClick=\'row_tag("+x+")\' style=\"background-color: "+color+"\"><td>" + parseInt(parseInt(x,10) + 1,10)  +"</td>";
-                txt += "<td>" + myObj[x].date_time.toString().slice(0,10) + "</td>" + "<td>" + myObj[x].date_time.toString().slice(11,23) + "</td>";
-                txt += "<td>temperature</td>"+"<td>"+myObj[x].temperature+"</td>";
-                txt +="</td></tr>";
+                cpn += "<tr class=\"row\" id=\"row"+x+"\""+ "onClick=\'row_tag("+x+")\' style=\"background-color: "+color+"\"><td>" + parseInt(parseInt(x,10) + 1,10)  +"</td>";
+                cpn += "<td>" + myObj[x].date_time.toString().slice(0,10) + "</td>" + "<td>" + myObj[x].date_time.toString().slice(11,23) + "</td>";
+                cpn += "<td>temperature</td>"+"<td>"+myObj[x].temperature+"</td>";
+                cpn +="</td></tr>";
             }
-            txt += "</table>" 
-            document.getElementById("table").innerHTML = txt;
+            cpn += "</table>" 
+            document.getElementById("table").innerHTML = cpn;
 
             //line chart gradient
             var ctx_temp = document.getElementById('temp_chart').getContext("2d");
             var gradientStroke_temp = ctx_temp.createLinearGradient(0, 0, 0, 300);
             gradientStroke_temp.addColorStop(0.1, "#FF5C38");
-            gradientStroke_temp.addColorStop(1, "#3E64FF");
+            gradientStroke_temp.addColorStop(1, "#333");
             
             //Sort temperature
             let max = 0, min = myObj[0].temperature;
@@ -132,7 +132,7 @@ function list_temp(ADDRESS){
         }
         
     };
-    xhr.send();
+    ing.send();
 }
 
         

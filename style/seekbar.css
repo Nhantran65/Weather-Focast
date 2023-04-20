@@ -49,13 +49,13 @@
     height: 1vw;
     width: 1vw;
     background: #fff;    
-    border: #3E64FF solid 0.25vw;
+    border: #333 solid 0.25vw;
     z-index: 2;
 }
 
 .seekbar_btn:hover,
 .seekbar_btn:active{
-    background: #3E64FF;
+    background: #333;
 }
 
 /* 
