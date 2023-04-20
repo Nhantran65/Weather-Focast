@@ -1,8 +1,8 @@
 body{
     font-family: 'Nunito', sans-serif;
     font-style: normal;
-    color: #262d41;
-    background: rgb(24, 32, 57);
+    color: #7f4265;
+    background: #fff;
     color: #fff;
     font-size: 1.5vw;
     
@@ -108,7 +108,7 @@ table {
 }
 
 tr{
-    background-color: #fff;
+    background-color: #333;
 }
 
 td {

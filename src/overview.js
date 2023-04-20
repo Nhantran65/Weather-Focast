@@ -14,7 +14,7 @@ function list_all_50(ADDRESS){
             txt += "<table id=\'memberTable\'>"
             txt += "<tr class = \"row\">";
             for (x = 0; x < 5; x++){
-                txt += "<td  style=\"background-color: #3E64FF;color: #fff;text-align: center;\">" ;
+                txt += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
                 txt += header[x];
                 txt += "</td>"
             }

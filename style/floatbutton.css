@@ -13,7 +13,7 @@
     transition:linear 0.2s;
 }
 .float:active{
-    background-color:#3E64FF;
+    background-color:#8c2838;
     animation: linear 0.4s;
 }
 .float:hover{

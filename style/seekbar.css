@@ -7,7 +7,7 @@
     width: 32vw;
     height: 0.8vw;
     border: 0.2vw solid #fff;
-    background: rgb(0,212,255);
+    background: rgb(58, 26, 77);
     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(236,255,38,1) 50%, rgba(255,0,0,1) 100%);;
     position: relative;
     cursor: pointer;

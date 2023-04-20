@@ -18,12 +18,12 @@
 <div class="bt">
 
     <button id = "bt1" onclick = "list_all_50('https://webapi19sa-1.course.tamk.cloud/v1/weather')">
-    View 1
+    Overview 
     </button>
 
     <div class="dropdown">
         <button id = "bt2" onclick = "list_temp('https://webapi19sa-1.course.tamk.cloud/v1/weather/temperature')">
-            View 2
+            Temperature Details
         </button>
         <div class="dropdown-content">
             <a href="#" onclick = "list_temp('https://webapi19sa-1.course.tamk.cloud/v1/weather/temperature')">Now</a>
@@ -37,7 +37,7 @@
 
     <div class="dropdown">
         <button id = "bt3" onclick = "list_rain('https://webapi19sa-1.course.tamk.cloud/v1/weather/rain')">
-            View 3
+            Rain Details
         </button>
         <div class="dropdown-content">
             <a href="#" onclick = "list_rain('https://webapi19sa-1.course.tamk.cloud/v1/weather/rain')">Now</a>
@@ -50,7 +50,7 @@
     </div>
     <div class="dropdown">
         <button id = "bt4" onclick = "list_4('https://webapi19sa-1.course.tamk.cloud/v1/weather','light',0)">
-            View 4
+            Light Details
         </button>
         <div class="dropdown-content">
             <a href="#" onclick = "list_4('https://webapi19sa-1.course.tamk.cloud/v1/weather','light',0)">Now</a>
@@ -73,9 +73,9 @@
     <div id="table"></div>
     
     <script src="./src/script.js"></script>
-    <script src="./src/view1.js"></script>
-    <script src="./src/view2.js"></script>
-    <script src="./src/view3.js"></script>
-    <script src="./src/view4.js"></script>
+    <script src="./src/overview.js"></script>
+    <script src="./src/temperature.js"></script>
+    <script src="./src/rain.js"></script>
+    <script src="./src/light.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ button:hover {
     background-color: #FFFFFF;
     opacity: 1;
     transition: 0.3s;
-    color: #3E64FF;
+    color: #aa1e5b;
 }
 button{
     position: static;

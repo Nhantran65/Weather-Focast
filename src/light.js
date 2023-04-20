@@ -1,7 +1,7 @@
 
 function new_type_button(method,time){
     txt = ""
-    txt += "<button style =\"opacity:0.9; background-color:#FFFFFF; color:#3E64FF \">"
+    txt += "<button style =\"opacity:0.9; background-color:#FFFFFF; color:#333 \">"
     txt += method
     txt += "</button>"
     txt += "<div class=\"dropdown-content\">"
@@ -65,7 +65,7 @@ function list_4(ADDRESS,method,time){
             
             txt += "<tr class = \"row\">";
             for (x = 0; x < 5; x++){
-                txt += "<td  style=\"background-color: #3E64FF;color: #fff;text-align: center;\">" ;
+                txt += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
                 txt += header[x];
                 txt += "</td>"
             }
@@ -90,7 +90,7 @@ function list_4(ADDRESS,method,time){
             //line chart gradient
             var ctx_humi = document.getElementById('view4_chart').getContext("2d");
             var gradientStroke_humi = ctx_humi.createLinearGradient(0, 0, 0, 500);
-            gradientStroke_humi.addColorStop(0.4, "#3E64FF");
+            gradientStroke_humi.addColorStop(0.4, "#333");
             gradientStroke_humi.addColorStop(1, "#A3B1FF");
             
             //Sort 
@@ -128,8 +128,8 @@ function list_4(ADDRESS,method,time){
                         pointBackgroundColor: "#FFFFFF",
                         pointBorderColor: "#FFFFFF",
                         borderWidth: 0,
-                        pointHoverBackgroundColor: "#3E64FF",
-                        pointHoverBorderColor: "#3E64FF",
+                        pointHoverBackgroundColor: "#333",
+                        pointHoverBorderColor: "#333",
                         fill: true,
                         backgroundColor: gradientStroke_humi,
                         borderColor: "#FFFFFF",
