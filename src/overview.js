@@ -1,4 +1,4 @@
-function list_all_50(ADDRESS){
+function list_all_30(ADDRESS){
     document.getElementById("type").innerHTML = ""
 
     var cpn = "";
@@ -28,7 +28,7 @@ function list_all_50(ADDRESS){
                 cpn += "<td>"+Object.keys(myObj[x].data)+"</td>"+"<td>"+Object.values(myObj[x].data)+"</td>";
                 cpn +="</td><tr>";
 
-                if (order===50) break;
+                if (order===30) break;
             }
             cpn += "</table>" 
             document.getElementById("table").innerHTML = cpn;
@@ -37,4 +37,4 @@ function list_all_50(ADDRESS){
     igr.send();
 }
 
-list_all_50('https://webapi19sa-1.course.tamk.cloud/v1/weather')
+list_all_30('https://webapi19sa-1.course.tamk.cloud/v1/weather')

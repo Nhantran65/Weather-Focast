@@ -132,7 +132,7 @@ Chart.elements.Rectangle.prototype.draw = function() {
             ctx.quadraticCurveTo(x_bl, y_bl, x_bl+radius, y_bl);
 
         }else if(width < 0){
-            // Negative values in a horizontal bar chart
+        //invalid value 
             x_tl = x+width;     x_tr = x;
             y_tl= y;            y_tr = y;
 

@@ -1,4 +1,4 @@
-const header = ["Order","Date","Time","Type","Value"];
+const header = ["Number","Date","Time","Type","Value"];
 const method_array = ["light","temperature","rain","wind_speed","wind_direction","humidity_in","humidity_out"]
 const color = "#ffffff";
 Chart.defaults.global.defaultFontColor = "#fff";
@@ -19,14 +19,15 @@ function min_max_bar(min,max,value){
 }
 
 function row_tag(x){
-    //alert(document.getElementById("row"+x).style.backgroundColor)
+
     if (document.getElementById("row"+x).style.backgroundColor === "rgb(255, 211, 131)"){
         document.getElementById("row"+x).style.backgroundColor = "rgb(255, 255, 255)"
     } else document.getElementById("row"+x).style.backgroundColor = "rgb(255, 211, 131)"
 }
 
+// function Using to get whole of elements 
 function reset() {
-	var elements = document.getElementsByClassName('row'); // get all elements
+	var elements = document.getElementsByClassName('row');
 	for(var i = 0; i < elements.length; i++){
 		elements[i].style.backgroundColor = "rgb(255, 255, 255)";
 	}
@@ -35,5 +36,10 @@ function reset() {
 function show_help(){
     let txt = "";
     txt += '<img class = "tuto" src="./style/image/Tuto.svg" alt="logo"></img>'
+    document.getElementById("table").innerHTML = txt;
+}
+function show_info(){
+    let txt = "";
+    txt += '<img class = "tuto" src="./style/image/info.svg" alt="logo"></img>'
     document.getElementById("table").innerHTML = txt;
 }

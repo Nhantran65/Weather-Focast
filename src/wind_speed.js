@@ -16,7 +16,7 @@ function list_rain(ADDRESS){
             txt += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
 
             //Bar graph
-            txt += "<div class=\"card\" style=\"background-color: #3E64FF;\">";   
+            txt += "<div class=\"card\" style=\"background-color: #333;\">";   
             txt += "<canvas id=\"rain_chart\"></canvas>";
             txt += "</div>";
 
@@ -28,7 +28,7 @@ function list_rain(ADDRESS){
             
             txt += "<tr class = \"row\">";
             for (x = 0; x < 5; x++){
-                txt += "<td  style=\"background-color: #3E64FF;color: #fff;text-align: center;\">" ;
+                txt += "<td  style=\"background-color: #333;color: #fff;text-align: center;\">" ;
                 txt += header[x];
                 txt += "</td>"
             }
@@ -37,13 +37,13 @@ function list_rain(ADDRESS){
             for (x in myObj) {
                     txt += "<tr class=\"row\" id=\"row"+x+"\""+ "onClick=\'row_tag("+x+")\' style=\"background-color: "+color+"\"><td>" + parseInt(parseInt(x,10) + 1,10)  +"</td>";
                     txt += "<td>" + myObj[x].date_time.toString().slice(0,10) + "</td>" + "<td>" + myObj[x].date_time.toString().slice(11,23) + "</td>";
-                    txt += "<td> rain </td>"+"<td>"+parseFloat(myObj[x].rain)+"</td>";
+                    txt += "<td> wind_speed </td>"+"<td>"+parseFloat(myObj[x].wind_speed)+"</td>";
                     txt +="</td></tr>";
                 }
             txt += "</table>" 
             document.getElementById("table").innerHTML = txt;
 
-            //rain chart gradient
+
             var ctx_bar = document.getElementById('rain_chart');
 
             var gradientStroke_rain = ctx_bar.getContext("2d").createLinearGradient(0, 0, 0, 500);
@@ -52,17 +52,17 @@ function list_rain(ADDRESS){
 
             
             //Sort temperature
-            let max = 0, min = myObj[0].rain;
+            let max = 0, min = myObj[0].wind_speed;
             let date = [];
             let value = [];
             for (x in myObj) {
                     date[x] = myObj[x].date_time.toString().slice(0,10) + " " + myObj[x].date_time.toString().slice(11,19);
-                    value[x] = myObj[x].rain;
-                    if (parseFloat(myObj[x].rain)>=max) max = parseFloat(myObj[x].rain);
-                    if (parseFloat(myObj[x].rain)<=min) min = parseFloat(myObj[x].rain);
+                    value[x] = myObj[x].wind_speed;
+                    if (parseFloat(myObj[x].wind_speed)>=max) max = parseFloat(myObj[x].wind_speed);
+                    if (parseFloat(myObj[x].wind_speed)<=min) min = parseFloat(myObj[x].wind_speed);
             }
 
-            min_max_bar(min,max,parseFloat(myObj[x].rain))
+            min_max_bar(min,max,parseFloat(myObj[x].wind_speed))
             seekbar()
             document.getElementById("hoverNow").innerText = "Now: " + parseFloat(value[x]).toFixed(2);
             //document.getElementById("checking").innerHTML = date;

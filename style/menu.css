@@ -11,16 +11,17 @@ button{
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     outline: 0;
-    background: black ;
+    background: orangered! ;
     border-radius: 2vw;
     border: 0;
     outline: 0;
-    font-weight: 500;
-    color: #fff;
+    font-weight: 700;
+    color: #333;
     opacity: 0.6;
     padding: 1vw 1.2vw;
     font-size: 1.5vw;
     margin-left: 1vw;
+    font-style: bold;
 }
 
 .help{

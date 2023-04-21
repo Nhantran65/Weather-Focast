@@ -1,11 +1,10 @@
 body{
     font-family: 'Nunito', sans-serif;
     font-style: normal;
-    color: #333;
     background: #fff;
-    color: #fff;
+    color: #333;
     font-size: 1.5vw;
-    
+    background-image: url("https://cdn.budgetyourtrip.com/images/photos/headerphotos/large/finland_tampere.jpg");
 }
 div{
     font-family: 'Nunito', sans-serif;
@@ -76,6 +75,7 @@ div{
     margin-right: auto;
     border-radius: 24px;
     position: static;
+    background-color: #333 !important;
 }
 
 table, tr, td{
@@ -93,10 +93,14 @@ table, tr, td{
 .row{
     width: 100%;
 }
+tr .row{
+    background-color: #333 !important;
+}
 
 .bt{
     --margin: 18.5vw;
     margin-left: calc(50% - var(--margin));
+    
 }
 
 
@@ -116,7 +120,7 @@ td {
     outline: 0;
     border: 0.3vw solid rgb(24, 32, 57);
     border-radius: 0.5vw;
-    color: black ;
+    
     width: 20%;
     padding-left: 3vw;
     padding-right: 3vw;
