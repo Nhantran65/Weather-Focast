@@ -12,8 +12,6 @@ function list_temp(ADDRESS){
             var myObj = JSON.parse(this.responseText);
             var x = 0;
             
-            //float button
-            cpn += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
 
             //bar graph
             cpn += "<div class=\"card\" style=\"background-color: #1E2745;\">";   
@@ -43,7 +41,7 @@ function list_temp(ADDRESS){
             cpn += "</table>" 
             document.getElementById("table").innerHTML = cpn;
 
-            //line chart gradient
+            //line chart 
             var ctx_temp = document.getElementById('temp_chart').getContext("2d");
             var gradientStroke_temp = ctx_temp.createLinearGradient(0, 0, 0, 300);
             gradientStroke_temp.addColorStop(0.1, "#FF5C38");
@@ -64,8 +62,8 @@ function list_temp(ADDRESS){
             seekbar()
             document.getElementById("hoverNow").innerText = "Now: " + parseFloat(value[x]).toFixed(2);
 
-            //document.getElementById("checking").innerHTML = date;
-            //Create new chart
+    
+            //Create chart
             let chart = new Chart(document.getElementById("temp_chart"), {
                 type: 'bar',
                 data: {

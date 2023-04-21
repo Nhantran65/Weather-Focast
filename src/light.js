@@ -13,7 +13,7 @@ function new_type_button(method,time){
 }
 
 function list_4(ADDRESS,method,time){
-    //alert("clicked");
+   
     var txt = "";
     const xhr = new XMLHttpRequest();
     if(time == '0'){
@@ -44,15 +44,12 @@ function list_4(ADDRESS,method,time){
             myObj = cloneObj
             }
 
-            //for checking only
           
             
             new_type_button(method,time)
             
-            //float button
-            txt += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
 
-            //Line graph
+            //Line of graph
             txt += "<div class=\"card\" style=\"background-color: #1E2745;\">";   
             txt += "<canvas id=\"view4_chart\"></canvas>";
             txt += "</div>";
@@ -114,8 +111,8 @@ function list_4(ADDRESS,method,time){
             
             seekbar()
             document.getElementById("hoverNow").innerText = "Now: " + parseFloat(value[x]).toFixed(2);
-            //document.getElementById("checking").innerHTML = date;
-            //Create new chart
+           
+            //Create  chart
             
             let chart = new Chart(document.getElementById("view4_chart"), {
                     type: 'line',

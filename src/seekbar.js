@@ -4,9 +4,7 @@ function seekbar () {
     var seekbar = document.getElementsByClassName('seekbar');
     for (var i = 0; i < seekbar.length; i++) {
 
-        /*
-         * Initial Seekbar
-         */
+       
         seekbar[i].innerHTML = '<div href="#" class="seekbar_btn"><span id="hoverNow" class="tooltip">data</span></div><div class="seekbar_bg"></div>';
         var seekbar_btn = seekbar[i].getElementsByClassName('seekbar_btn')[0];
         var seekbar_bg = seekbar[i].getElementsByClassName('seekbar_bg')[0];

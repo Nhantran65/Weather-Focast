@@ -35,11 +35,14 @@ function reset() {
 
 function show_help(){
     let txt = "";
-    txt += '<img class = "tuto" src="./style/image/Tuto.svg" alt="logo"></img>'
+    txt += '<img class = "tuto" src="./style/image/helpMenu.svg" alt="logo"></img>'
     document.getElementById("table").innerHTML = txt;
 }
 function show_info(){
     let txt = "";
     txt += '<img class = "tuto" src="./style/image/info.svg" alt="logo"></img>'
+    txt += '<img class = "tuto" src="./style/image/tier10.svg" alt="logo"></img>'
+
+
     document.getElementById("table").innerHTML = txt;
 }

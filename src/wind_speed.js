@@ -1,6 +1,6 @@
-function list_rain(ADDRESS){
+function list_wind(ADDRESS){
     document.getElementById("type").innerHTML = ""
-    //alert("clicked");
+    
     var txt = "";
     const xhr = new XMLHttpRequest();
     xhr.open("GET", ADDRESS);
@@ -12,12 +12,11 @@ function list_rain(ADDRESS){
             var myObj = JSON.parse(this.responseText);
             var x = 0;
             
-            //float button
-            txt += '<a href="#" onClick = "reset()" class="float"><img class = "reset" src="./style/image/circular-arrow.svg" alt="logo"></img><p class = "reset_text">Reset</p></a>'
+           
 
             //Bar graph
             txt += "<div class=\"card\" style=\"background-color: #333;\">";   
-            txt += "<canvas id=\"rain_chart\"></canvas>";
+            txt += "<canvas id=\"wind_chart\"></canvas>";
             txt += "</div>";
 
             //slice
@@ -44,11 +43,11 @@ function list_rain(ADDRESS){
             document.getElementById("table").innerHTML = txt;
 
 
-            var ctx_bar = document.getElementById('rain_chart');
+            var ctx_bar = document.getElementById('wind_chart');
 
-            var gradientStroke_rain = ctx_bar.getContext("2d").createLinearGradient(0, 0, 0, 500);
-            gradientStroke_rain.addColorStop(0.4, "#fff");
-            gradientStroke_rain.addColorStop(1, "transparent");
+            var gradientStroke_wind = ctx_bar.getContext("2d").createLinearGradient(0, 0, 0, 500);
+            gradientStroke_wind.addColorStop(0.4, "#fff");
+            gradientStroke_wind.addColorStop(1, "transparent");
 
             
             //Sort temperature
@@ -67,14 +66,14 @@ function list_rain(ADDRESS){
             document.getElementById("hoverNow").innerText = "Now: " + parseFloat(value[x]).toFixed(2);
             //document.getElementById("checking").innerHTML = date;
             //Create new chart
-            let chart = new Chart(document.getElementById("rain_chart"), {
+            let chart = new Chart(document.getElementById("wind_chart"), {
                     type: 'bar',
                     data: {
                     labels: date,   
                     datasets: [
                 {
-                    label: "Rain (mm)",
-                    backgroundColor: gradientStroke_rain,
+                    label: "wind (mm)",
+                    backgroundColor: gradientStroke_wind,
                     hoverBackgroundColor: "#6987FF",
                     data: value
                 }
