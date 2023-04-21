@@ -41,7 +41,7 @@ function show_help(){
 function show_info(){
     let txt = "";
     txt += '<img class = "tuto" src="./style/image/info.svg" alt="logo"></img>'
-    txt += '<img class = "tuto" src="./style/image/tier10.svg" alt="logo"></img>'
+    txt += '<img class = "tuto" src="./img/tier10.png" alt="logo"></img>'
 
 
     document.getElementById("table").innerHTML = txt;
